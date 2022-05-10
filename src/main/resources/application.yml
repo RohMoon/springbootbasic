@@ -6,6 +6,12 @@ my:
   name : sangMoon
   age : ${random.int}
   fullName : ${my.name} Roh
+  value : 100
+
+your:
+  name : JenHJang
+  age : 10501
+  fullName : ${your.name} PIKA
 
 server:
   http2:

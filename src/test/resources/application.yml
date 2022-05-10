@@ -7,6 +7,11 @@ my:
   age : ${random.int}
   fullName : ${my.name} Roh
 
+your:
+  name : JenHJang
+  age : 10501
+  fullName : ${your.name} PIKA
+
 server:
   http2:
     enabled: true

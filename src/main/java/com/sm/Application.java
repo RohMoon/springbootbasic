@@ -3,7 +3,9 @@ package com.sm;
 import org.apache.catalina.connector.Connector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @SpringBootApplication
+//@EnableConfigurationProperties(MyProperties.class)
 @RestController
 public class Application {
+
+
+    @ConfigurationProperties("server")
+    @Bean
+    public ServerProperties serverProperties(){
+        return new ServerProperties();
+    }
 
     @GetMapping("/hello")
     public String hello(){
@@ -53,4 +63,5 @@ public class Application {
         connector.setPort(8080); // 포트 설정 (https랑 달라야함.)
         return connector;
     }
+
 }
