@@ -3,7 +3,7 @@ solo:
   how-long: 23
 
 my:
-  name : sangMoon
+  name : ARA
   age : ${random.int}
   fullName : ${my.name} Roh
 
