@@ -5,16 +5,15 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-//@Component
-public class AppRunner3 implements ApplicationRunner {
+@Component
+public class AppRunner4 implements ApplicationRunner {
 
     @Autowired
-    EventService eventService;
+    private String hello;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        eventService.createEvent();
-        eventService.publishEvent();
-        eventService.deleteEvent();
+        System.out.println(">=========<==========>==================<");
+        System.out.println(hello);
     }
 }
