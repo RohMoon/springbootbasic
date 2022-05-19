@@ -1,5 +1,7 @@
 package com.sm;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -10,6 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(1)
 public class AppRunner implements ApplicationRunner {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     MyProperties myProperties;
@@ -25,6 +29,7 @@ public class AppRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        logger.info("hello Logger");
         System.out.println("AppRunner ApplicationRunner");
         System.out.println("foo : "+ args.containsOption("foo"));
         System.out.println("bar : "+ args.containsOption("bar"));
