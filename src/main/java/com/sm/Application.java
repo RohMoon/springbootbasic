@@ -5,21 +5,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
 
 
 @SpringBootApplication
-//@EnableConfigurationProperties(MyProperties.class)
-@RestController
+
 public class Application {
 
 
@@ -29,10 +24,6 @@ public class Application {
         return new ServerProperties();
     }
 
-    @GetMapping("/hello")
-    public String hello(){
-        return "hello Spring!";
-    }
     /*
     //static Method 사용 커스터마이징 할 수 없음.
     public static void main(String[] args) {
