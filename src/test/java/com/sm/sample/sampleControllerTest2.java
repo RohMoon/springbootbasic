@@ -35,7 +35,7 @@ public class sampleControllerTest2 {
         when(sampleService.getName()).thenReturn("js");
 
         mockMvc.perform(get("/hello"))
-                .andExpect(content().string("hello js"));
+                .andExpect(content().string("hellojs"));
 
         assertThat(outputCaptureRule.toString()).contains("sangmoon");
     }
