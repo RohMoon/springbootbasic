@@ -13,7 +13,7 @@ public class sampleController {
     @Autowired
     private SampleService sampleService;
 
-    @GetMapping("/hello")
+    @GetMapping("/helloSample")
     public String hello() {
         logger.info("sangmoon");
 
