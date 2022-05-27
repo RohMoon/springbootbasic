@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController_ctrl {
 
-    @GetMapping("/hello")
+    @GetMapping("/helloGet")
     public @ResponseBody String hello(){
         return "hello";
     }

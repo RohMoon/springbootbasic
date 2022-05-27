@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class sampleController {
+public class SampleController {
 
-    Logger logger = LoggerFactory.getLogger(sampleController.class);
+    Logger logger = LoggerFactory.getLogger(SampleController.class);
     @Autowired
     private SampleService sampleService;
 

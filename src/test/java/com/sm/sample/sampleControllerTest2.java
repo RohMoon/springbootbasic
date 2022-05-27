@@ -18,7 +18,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 //@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
-@WebMvcTest(sampleController.class)
+@WebMvcTest(SampleController.class)
 public class sampleControllerTest2 {
 
     @Rule
